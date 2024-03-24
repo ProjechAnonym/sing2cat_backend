@@ -5,10 +5,10 @@ cors:
         - http://127.0.0.1:3000
         - http://127.0.0.1:8085
 jwt:
-    email: 1982209396@qq.com
-    key: wsr19990902
+    email: 19822
+    key: ws
 smtp:
     host: smtp.qq.com
-    password: kefgmvmjeqoh
+    password: kefgmv
     port: 465
-    username: 1982209396@qq.com
+    username: 19822
