@@ -1,0 +1,15 @@
+api:
+  listen: 8085
+cors:
+  origins:
+    - http://127.0.0.1:3000
+    - http://127.0.0.1:8085
+    - http://localhost:3000
+jwt:
+  email: 198220
+  key: wsr19990902
+smtp:
+  host: smtp.qq.com
+  password: kefgmv
+  port: 465
+  username: 19822
