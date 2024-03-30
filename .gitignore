@@ -1,0 +1,4 @@
+config/config.yaml
+config/sing2cat/*
+log/
+sing2cat.db
