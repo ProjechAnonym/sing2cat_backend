@@ -58,7 +58,7 @@ func Send_reset_url(email string,html string) error{
 	// 写入BuntDb
 	
 	if err = ginconfig.BuntDb.Update(func(tx *buntdb.Tx) error {
-		_,_,err:= tx.Set(email,token,&buntdb.SetOptions{Expires: true, TTL: 5*time.Minute})
+		_,_,err:= tx.Set(email,token,&buntdb.SetOptions{Expires: true, TTL: 2*time.Minute})
 		if err != nil{
 			return err
 		}
