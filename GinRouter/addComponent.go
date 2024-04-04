@@ -35,13 +35,13 @@ func Add_item(r *gin.RouterGroup) {
 	// 提交图片路由
 	add_router.POST("/pic",func(ctx *gin.Context) {
 		name := ctx.PostForm("name")
+		app := ctx.PostForm("app")
 		file,err := ctx.FormFile("file")
 		if err!=nil{
 			ginconfig.Logger_caller("Read picture failed!",err)
 			ctx.JSON(http.StatusInternalServerError,gin.H{"Error":err.Error()})
 			return
 		}
-		app := ctx.PostForm("app")
 		// 判断是否允许的图片格式并更改文件名
 		dst,err := gincontroller.Change_file_name(file.Filename,name,app) 
 		if err!=nil{
