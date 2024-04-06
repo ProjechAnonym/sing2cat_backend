@@ -93,7 +93,7 @@ func Sing2cat_func(r *gin.RouterGroup, id *cron.EntryID, cron *cron.Cron, lock *
 		ctx.JSON(http.StatusOK, gin.H{"result": "success"})
 	})
 
-	sing2cat.GET("/check",func(ctx *gin.Context) {
+	sing2cat.POST("/check",func(ctx *gin.Context) {
 		service := ctx.PostForm("service")
 		cmd_check := exec.Command("systemctl", "status", service)
 		// 获取status的输出结果
@@ -115,7 +115,7 @@ func Sing2cat_func(r *gin.RouterGroup, id *cron.EntryID, cron *cron.Cron, lock *
 			return 
 		}
 	})
-	sing2cat.GET("/restart",func(ctx *gin.Context) {
+	sing2cat.POST("/restart",func(ctx *gin.Context) {
 		service := ctx.PostForm("service")
 		if err := generalcmdcommand.Cmd_reboot_service(service);err != nil{
 			ginconfig.Logger_caller("restart failed!",err)

@@ -3,6 +3,8 @@ package ginconfig
 import (
 	"errors"
 	"fmt"
+	"os"
+	"path/filepath"
 
 	"github.com/huandu/go-clone"
 	"github.com/spf13/viper"
@@ -53,8 +55,8 @@ func Set_value(value interface{},keys ...string) error{
 }
 
 func Get_gin_dir() string {
-	// base_dir := filepath.Dir(os.Args[0])
-	base_dir := "E:/Myproject/sing2cat_web"
+	base_dir := filepath.Dir(os.Args[0])
+	// base_dir := "E:/Myproject/sing2cat_web"
 	return base_dir
 }
 func get_gin_config(file string) error {
