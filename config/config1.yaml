@@ -1,0 +1,20 @@
+api:
+  listen: 8085
+cors:
+  origins:
+    - http://127.0.0.1:3000
+    - http://127.0.0.1:8085
+    - http://localhost:3000
+jwt:
+  email: 1
+  key: Wsr19990
+smtp:
+  host: smtp.qq.com
+  password: dlbeaa
+  port: 465
+  username: 198220939
+routes:
+  - /reset
+  - /add
+  - /home
+  - /
