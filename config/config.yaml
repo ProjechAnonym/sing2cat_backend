@@ -6,13 +6,13 @@ cors:
     - http://127.0.0.1:8085
     - http://localhost:3000
 jwt:
-  email: 19822
-  key: Wsr19
+  email: 1982209396@qq.com
+  key: Wsr19990902
 smtp:
   host: smtp.qq.com
-  password: dlbea
+  password: dlbeaalzygvrefjb
   port: 465
-  username: 1982209
+  username: 1982209396@qq.com
 routes:
   - /reset
   - /add
